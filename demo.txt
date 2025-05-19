@@ -1,0 +1,261 @@
+import React from 'react'
+import Navbar from '../components/Navbar'
+
+const ReportPage = () => {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-[#E4D2FC] p-4">
+      <div className="mx-auto flex w-full max-w-[1000px] flex-col">
+       <Navbar/>
+
+        <h1 className="mt-8 text-center text-3xl font-bold">Your Medicine Analysis</h1>
+
+        <div className="mx-auto mt-14 w-full max-w-[800px] border bg-white p-10 text-left shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+          <p>Sure! Here’s a clear and concise description for <strong>Paracetamol (Acetaminophen)</strong> covering all the points you requested:</p>
+
+          <hr className="my-4" />
+
+          <h3 className="mb-2 text-xl font-semibold">Paracetamol (Acetaminophen)</h3>
+
+          <p>
+            <strong>About the medicine:</strong><br />
+            Paracetamol, also known as acetaminophen, is a widely used over-the-counter medication that helps relieve pain and reduce fever. It works by blocking the production of certain chemicals in the brain that cause pain and fever.
+          </p>
+
+          <div className="mt-4">
+            <strong>Usage instructions:</strong>
+            <ul className="mt-2 list-inside list-disc">
+              <li>Take the medicine exactly as directed on the package or by your healthcare provider.</li>
+              <li>It can be taken with or without food.</li>
+              <li>Do not exceed the recommended dose to avoid liver damage.</li>
+              <li>For adults and children above 12 years, typical doses are 500 mg to 1000 mg every 4 to 6 hours as needed, not exceeding 4 grams per day.</li>
+              <li>For children under 12, dosing is based on weight and age, so follow pediatric guidelines or consult a doctor.</li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <strong>Possible side effects:</strong>
+            <ul className="mt-2 list-inside list-disc">
+              <li>Usually well tolerated when taken as recommended.</li>
+              <li>Rare side effects include allergic reactions like rash, itching, swelling, or difficulty breathing.</li>
+              <li>Overdose can cause serious liver damage, which may be life-threatening.</li>
+              <li>If you experience any unusual symptoms or signs of allergic reaction, seek medical help immediately.</li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <strong>Recommended age group:</strong>
+            <ul className="mt-2 list-inside list-disc">
+              <li>Safe for use in infants, children, adults, and elderly when dosed appropriately.</li>
+              <li>Always follow specific pediatric dosing for children under 12 years.</li>
+              <li>Consult a healthcare provider before use in infants under 2 months or those with liver problems.</li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <strong>Expiry information:</strong>
+            <ul className="mt-2 list-inside list-disc">
+              <li>Check the packaging for the expiry date before use.</li>
+              <li>Do not use after the expiration date as the effectiveness and safety may be compromised.</li>
+              <li>Store in a cool, dry place away from direct sunlight.</li>
+            </ul>
+          </div>
+
+          <div className="mt-4">
+            <strong>Primary purpose:</strong>
+            <ul className="mt-2 list-inside list-disc">
+              <li>To relieve mild to moderate pain such as headaches, toothaches, muscle aches, and menstrual cramps.</li>
+              <li>To reduce fever caused by infections or illnesses.</li>
+            </ul>
+          </div>
+
+          <hr className="my-4" />
+
+          <p className="text-center">If you want, I can help tailor it for a leaflet, website, or patient handout. Would you like that?</p>
+        </div>
+
+        <div className="mx-auto mt-6 flex w-full max-w-[800px] flex-col gap-4">
+          <button className="w-full border-2 bg-purple-400 py-2 font-bold shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition hover:bg-purple-500 hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)]">Download PDF</button>
+          <button className="w-full border-2 bg-purple-400 py-2 font-bold shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition hover:bg-purple-500 hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)]">Analysis Next</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ReportPage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div className="min-h-screen bg-[#E4D2FC] flex justify-center items-center p-4">
+      <div className="w-full max-w-[1000px] flex flex-col">
+        <Navbar />
+        <div className="flex flex-col md:flex-row flex-1 min-h-[calc(100vh-72px)]">
+          <section
+            className="border-2 border-black bg-white p-6 md:p-8 shadow-[6px_6px_0_0_rgba(0,0,0,1)] md:m-14 md:w-1/2 w-full"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            aria-label="Upload medicine image section"
+          >
+            <h1 className="text-center text-xl font-bold">Upload Your Medicine Image</h1>
+            <p className="mt-5 text-center text-xs text-zinc-400 italic">
+              Please upload an image of the back side of the medicine wrapper to help analyze the medication accurately.
+            </p>
+
+            <label
+              htmlFor="file-upload"
+              className="mt-5 flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-6 hover:border-gray-400"
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => e.key === 'Enter' && document.getElementById('file-upload').click()}
+            >
+              <div className="mb-2 text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+              </div>
+              <p className="text-sm text-gray-600">Drag & drop or click to choose image file</p>
+              <p className="mt-1 text-xs text-gray-400">Max file size: 10 MB</p>
+              <input
+                id="file-upload"
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handleFileChange}
+              />
+            </label>
+
+            <div className="mt-6 flex items-center justify-between rounded-lg border p-4">
+              <div className="flex items-center space-x-3">
+                <div className="rounded bg-orange-100 p-2 text-orange-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5V19a2 2 0 002 2h14a2 2 0 002-2v-2.5M16 12l-4-4-4 4M12 16v-8" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-700">{file ? file.name : 'No image uploaded'}</p>
+                  <p className="text-xs text-gray-400">
+                    {file
+                      ? `${file.type || 'Unknown format'} | ${(file.size / 1024 / 1024).toFixed(2)} MB`
+                      : 'Upload an image file (JPG, PNG, etc.) to start'}
+                  </p>
+                </div>
+              </div>
+              <button
+                className={`text-gray-500 hover:text-gray-700 ${!file ? 'opacity-50 cursor-not-allowed' : ''}`}
+                aria-label="Delete uploaded image"
+                onClick={() => setFile(null)}
+                disabled={!file}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <button
+              className="mt-4 w-full items-center justify-center bg-green-400 border-2 px-3 py-2 text-black font-bold hover:shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-shadow duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+              onClick={handleAnalyze}
+              disabled={loading}
+              aria-busy={loading}
+            >
+              <span>{loading ? 'Analyzing...' : 'Analyze Medicine'}</span>
+            </button>
+
+            <Link to="/report" className="mt-4 block text-center text-blue-600 underline">
+              Go to Report (Test Link)
+            </Link>
+          </section>
+
+          <aside className="mt-10 md:mt-14 md:w-1/2 w-full pr-0 md:pr-14 flex flex-col justify-start">
+            <div className="h-auto w-full border-2 border-black bg-white p-5 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+              <h1 className="mb-2 text-xl font-bold">How PillPeer Works?</h1>
+              <p className="text-sm text-gray-700">
+                PillPeer analyzes the medicine and generates a detailed report containing various important details, including:
+              </p>
+              <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-gray-600">
+                <li>About the medicine</li>
+                <li>Usage instructions</li>
+                <li>Possible side effects</li>
+                <li>Recommended age group</li>
+                <li>Expiry information</li>
+                <li>Primary purpose</li>
+              </ul>
+            </div>
+
+            <div className="mt-5">
+              <h1 className="mb-2 text-lg font-bold">Disclaimer</h1>
+              <p className="text-sm text-gray-600">
+                This application is built to raise awareness about the proper use of medicine. It helps users take the right medication at the right time, avoid expired products, and prevent misuse of medicine for incorrect illnesses.
+                <br />
+                <br />
+                <strong>Important:</strong> This application does not provide medical advice or recommendations. Always consult a licensed doctor or follow a valid prescription before taking any medication.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>

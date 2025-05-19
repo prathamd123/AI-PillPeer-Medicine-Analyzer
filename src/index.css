@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@media (max-width: 750px) {
+    nav {
+      margin-bottom: 1.25rem; /* mb-5 */
+      padding: 0.5rem; /* p-2 */
+    }
+  }
+
+
+  html, body {
+  height: 100%;
+  overflow: auto;
+  background-color: #bef264; /* Tailwind's lime-300 hex */
+  background-attachment: fixed;
+}
