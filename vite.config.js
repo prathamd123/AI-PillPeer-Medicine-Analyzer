@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: true,
     port: process.env.PORT || 5173,
-    allowedHosts: 'all',
+    allowedHosts: ['ai-pillpeer.onrender.com']
   },
 })
