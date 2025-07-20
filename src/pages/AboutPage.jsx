@@ -2,13 +2,14 @@
 
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
 
 const AboutPage = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex min-h-screen items-center justify-center bg-lime-300 p-4">
       <div className="mx-auto flex w-full max-w-[1000px] flex-col">
         <Navbar />
-
         <h1 className="mt-8 text-center text-3xl font-bold">About This Application</h1>
 
         <div className="mx-auto mt-14 w-full max-w-[800px] border bg-white p-10 text-left shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
@@ -53,6 +54,12 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
+        <button
+          className="mt-8 w-fit border-2 bg-lime-400 py-2 px-6 font-bold shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-lime-500 self-center"
+          onClick={() => navigate(-1)}
+        >
+          ← Back
+        </button>
       </div>
     </div>
   )

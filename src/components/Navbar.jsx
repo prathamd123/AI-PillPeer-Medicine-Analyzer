@@ -10,9 +10,14 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between p-4 px-6 md:px-14">
-      <div className="border-2 bg-white px-4 py-1 text-xl font-bold text-gray-800 shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
+      <button
+        className="border-2 bg-white px-4 py-1 text-xl font-bold text-gray-800 shadow-[4px_4px_0_0_rgba(0,0,0,1)]"
+        onClick={() => navigate('/')}
+        aria-label="Go to main page"
+        style={{ cursor: 'pointer' }}
+      >
         AI PillPeer
-      </div>
+      </button>
 
       <div className="space-x-4 px-3 md:space-x-6">
         <button
